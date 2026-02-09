@@ -24,9 +24,12 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
+  display: inline;
   text-align: center;
+
 }
-.menu {
+
+nav {
   background-color: #cfc0b0;
   border-radius: 10px;
   padding: 12px;
@@ -34,18 +37,9 @@ footer {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* .menu-container {
-    text-align: center;
-} */
-
-.sub-menu {
-  display: inline-block;
-  background-color: #cfc0b0;
-  border-radius: 10px;
+footer nav {
   padding: 6px;
-  margin: 8px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  margin: 4px;
 }
 
 nav a {
@@ -56,8 +50,13 @@ nav a {
   transition: background-color 0.3s ease;
 }
 
+footer nav a {
+  padding: 4px 8px;
+}
+
 nav a:hover {
   background-color: #d9cfc0;
+
 }
 
 h1,
