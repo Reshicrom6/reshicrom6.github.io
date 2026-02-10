@@ -1,0 +1,42 @@
+body {
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(58, 56, 56);
+  color: white;
+  margin-top: 0;
+}
+
+header {
+  background-color: darkblue;
+  width: 100%;
+  padding: 1em;
+}
+header a {
+  font-size: x-large;
+  border: 2px solid transparent;
+}
+
+header a:hover {
+  background-color: darkcyan;
+  border: 2px solid darkcyan;
+  border-radius: 3px;
+}
+
+a {
+  color: lightblue;
+}
+
+a:hover {
+  color: cyan;
+}
+
+a:visited {
+    color: purple;
+}
+
+ul {
+  padding-left: 0;
+}

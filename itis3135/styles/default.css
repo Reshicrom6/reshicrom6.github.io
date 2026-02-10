@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(211, 248, 207);
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  font-family: "Trebuchet MS", "Verdana", sans-serif;
+}
+
+header {
+  width: 50%;
+  background-color: rgb(156, 187, 103);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+header nav {
+  font-size: large;
+  padding: 5px;
+}
+
+header nav a:hover {
+  background-color: rgb(143, 179, 83);
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header nav a {
+  color: darkgreen;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 2px;
+}
+
+main {
+  width: 50%;
+  text-align: left;
+}
+
+footer a:hover,
+footer a:visited {
+  color: purple;
+}
+
+footer {
+  width: 50%;
+}
+
+footer nav {
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #333;
+  margin: 10px 0;
+}
