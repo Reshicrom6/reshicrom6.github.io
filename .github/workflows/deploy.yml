@@ -1,0 +1,22 @@
+name: Deploy to UNCC Student Webpage
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Upload to UNCC via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: ${{ secrets.UNCC_SERVER }}
+          username: ${{ secrets.UNCC_USER }}
+          ssh_private_key: ${{ secrets.UNCC_PRIVATE_KEY }}
+          local_path: "./"
+          remote_path: "/public_html"
