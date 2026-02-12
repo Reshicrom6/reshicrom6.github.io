@@ -1,0 +1,29 @@
+name: Deploy to UNCC Student Webpage
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Deploy to UNCC via SFTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.UNCC_SERVER }}
+          username: ${{ secrets.UNCC_USER }}
+          password: ${{ secrets.UNCC_PASS }}
+          protocol: "sftp"
+          local-dir: "./"
+          server-dir: "/public_html/"
+          exclude: |
+            .github/
+            .git/
+            .vscode/
+            node_modules/
+            .DS_Store

@@ -39,6 +39,12 @@ a:visited {
   color: purple;
 }
 
-ul {
+#homepage-ul {
+  list-style-position: outside;
   padding-left: 0;
+}
+
+#introduction-ul {
+  text-align: left;
+  list-style-position: inside;
 }
