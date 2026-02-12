@@ -10,7 +10,7 @@ body {
 
 header {
   width: 50%;
-  background-color: rgb(156, 187, 103);
+  background-color: rgb(188, 221, 135);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -23,13 +23,13 @@ header nav {
 }
 
 header nav a:hover {
-  background-color: rgb(154, 211, 62);
+  background-color: rgb(162, 228, 57);
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header nav a {
-  color: darkgreen;
+  color: rgb(15, 104, 15);
   text-decoration: none;
   margin: 0 10px;
   padding: 2px;
