@@ -6,13 +6,15 @@ body {
   text-align: center;
   background-color: rgb(58, 56, 56);
   color: white;
-  margin-top: 0;
+  margin: 0;
+  padding: 0;
 }
 
 header {
   background-color: darkblue;
+  box-sizing: border-box;
   width: 100%;
-  padding: 1em;
+  padding-bottom: 10px;
 }
 header a {
   font-size: x-large;
@@ -34,7 +36,7 @@ a:hover {
 }
 
 a:visited {
-    color: purple;
+  color: purple;
 }
 
 ul {
