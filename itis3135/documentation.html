@@ -6,12 +6,202 @@
     <title>Jed T. Duncan's Jolly Dog | ITIS3135 | Documentation</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Trebuchet MS", "Verdana", sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Desktop Layout - Navbar on the left side */
+        @media (min-width: 768px) {
+            body {
+                display: flex;
+            }
+
+            #navbar {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 250px;
+                height: 100vh;
+                background-color: rgb(188, 221, 135);
+                border-right: 3px solid rgb(162, 228, 57);
+                padding: 20px;
+                overflow-y: auto;
+                box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+            }
+
+            #navbar header {
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-bottom: 20px;
+                border-bottom: 2px solid rgb(15, 104, 15);
+                padding-bottom: 10px;
+                color: rgb(15, 104, 15);
+            }
+
+            #main-doc {
+                margin-left: 250px;
+                padding: 40px;
+                flex: 1;
+            }
+
+
+            #navbar header {
+                font-size: 1.2em;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            #main-doc {
+                padding: 20px;
+            }
+        }
+
+        /* Navbar links styling */
+        .nav-link {
+            display: block;
+            padding: 10px 15px;
+            margin: 5px 0;
+            text-decoration: none;
+            color: rgb(15, 104, 15);
+            background-color: #fff;
+            border-left: 4px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .nav-link:hover {
+            background-color: rgb(162, 228, 57);
+            border-left-color: rgb(15, 104, 15);
+            transform: translateX(5px);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link:active {
+            background-color: rgb(15, 104, 15);
+            color: white;
+        }
+
+        /* Main sections styling */
+        .main-section {
+            margin-bottom: 50px;
+            scroll-margin-top: 20px;
+        }
+
+        .main-section header {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgb(162, 228, 57);
+            padding-bottom: 10px;
+            color: rgb(15, 104, 15);
+        }
+
+        .main-section p {
+            margin-bottom: 15px;
+        }
+
+        .main-section ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .main-section li {
+            margin-bottom: 8px;
+        }
+
+        code {
+            display: block;
+            background-color: rgb(211, 248, 207);
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid rgb(162, 228, 57);
+            overflow-x: auto;
+            font-family: "Courier New", monospace;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <div data-include="components/header.html"></div>
 
-    <main>
-        <h2>Instructions</h2>
+    <main id="main-doc">
+        <h2>Documentation</h2>
+
+    <section class="main-section" id="Introduction">
+      <header>Introduction 🐕</header>
+      <p>Dogs are wonderful companions that bring joy, loyalty, and love into our lives. As a responsible dog owner, understanding proper care and training is essential for creating a happy and healthy relationship with your furry friend.</p>
+      <p>Dog care encompasses various aspects of pet ownership, including nutrition, exercise, training, and health maintenance. A well-cared-for dog is typically:</p>
+      <ul>
+        <li>Well-fed with balanced nutrition appropriate for their age, size, and activity level. Proper nutrition supports healthy growth, maintains energy levels, and prevents common health issues.</li>
+        <li>Regularly exercised through daily walks, playtime, and mental stimulation. Exercise keeps dogs physically fit, mentally engaged, and helps prevent behavioral problems caused by excess energy.</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="What_You_Should_Already_Know">
+      <header>What You Should Already Know 🦴</header>
+      <p>This guide assumes you have the following basic understanding:</p>
+      <ul>
+        <li>A general commitment to providing proper care and attention to a living being.</li>
+        <li>Basic knowledge of dog behavior and body language to understand your dog's needs.</li>
+        <li>Willingness to invest time in training and socialization. If you are new to dog ownership, consider consulting with professional trainers or veterinarians for additional guidance.</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Dog_Breeds_And_Characteristics">
+      <header>Dog Breeds and Characteristics 🐾</header>
+      <p>Dogs come in many breeds, each with unique characteristics and temperaments. Some breeds are energetic and require extensive exercise, while others are more laid-back and content with moderate activity. Understanding your dog's breed characteristics helps you provide appropriate care and training.</p>
+      <p>Different breeds have varying needs: working breeds like Border Collies and German Shepherds thrive on mental and physical challenges, while companion breeds like Cavalier King Charles Spaniels are bred for companionship and adapt well to apartment living. Size also matters - small breeds may have different dietary and exercise requirements compared to large breeds.</p>
+      <p>Regardless of breed, all dogs share common needs: love, attention, proper nutrition, regular exercise, and consistent training. While breed characteristics provide a general guide, each dog is an individual with their own personality. Getting to know your specific dog's preferences, energy level, and temperament is key to building a strong bond.</p>
+    </section>
+
+    <section class="main-section" id="Basic_Commands">
+      <header>Basic Commands 🎾</header>
+      <p>Teaching your dog basic commands is essential for their safety and your peace of mind. Start with these fundamental commands:</p>
+      <code>Sit: Hold treat above dog's nose, move it back over their head.
+Dog will naturally sit. Say "Sit" and reward immediately.
+
+Stay: Ask dog to sit, hold palm up, say "Stay".
+Take a step back. If they stay, reward and praise.
+
+Come: In safe area, say dog's name + "Come" enthusiastically.
+Reward generously when they arrive.</code>
+      <p>Practice these commands daily in short 5-10 minute sessions for best results. Consistency and positive reinforcement are key!</p>
+    </section>
+
+    <section class="main-section" id="Dog_Nutrition">
+      <header>Dog Nutrition 🍖</header>
+      <p>Proper nutrition is fundamental to your dog's health and longevity. The right diet depends on several factors including age, size, activity level, and any health conditions.</p>
+      <p>Puppies require food formulated for growth, typically with higher protein and calorie content. For example:</p>
+      <code>Puppy (2-12 months): High-protein puppy formula, 3-4 meals daily
+Calories: 50-60 per pound of body weight</code>
+      <p>Adult dogs need balanced maintenance diets that sustain their energy without causing weight gain.</p>
+      <code>Adult (1-7 years): Quality adult formula, 2 meals daily
+Calories: 30-40 per pound of body weight</code>
+      <p>Senior dogs benefit from specialized formulas that support aging joints and organs.</p>
+      <code>Senior (7+ years): Senior formula with joint support, 2 meals daily
+Calories: 20-30 per pound of body weight (less active)</code>
+      <p>Always provide fresh water and avoid feeding dogs chocolate, grapes, onions, or other toxic foods. Consult your veterinarian for personalized nutrition advice.</p>
+    </section>
+
+    <nav id="navbar">
+      <header>🐕 Jolly Dog Guide</header>
+      <a class="nav-link" href="#Introduction">Introduction</a>
+      <a class="nav-link" href="#What_You_Should_Already_Know">What You Should Know</a>
+      <a class="nav-link" href="#Dog_Breeds_And_Characteristics">Breeds & Characteristics</a>
+      <a class="nav-link" href="#Basic_Commands">Basic Commands</a>
+      <a class="nav-link" href="#Dog_Nutrition">Dog Nutrition</a>
+    </nav>
+
     </main>
 
     <div data-include="components/footer.html"></div>

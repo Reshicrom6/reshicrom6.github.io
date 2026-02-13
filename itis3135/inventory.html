@@ -1,19 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jed T. Duncan's Jolly Dog | ITIS3135 | Inventory</title>
-    <link rel="stylesheet" href="styles/default.css">
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="styles/default.css" />
+    <script
+      src="https://lint.page/kit/4d0fe3.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      thead {
+        background-color: rgb(162, 228, 57);
+        color: rgb(15, 104, 15);
+        font-weight: bold;
+      }
+
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid rgb(188, 221, 135);
+      }
+
+      tr[class="purchased"] {
+        background-image: linear-gradient(
+          to right,
+          rgb(211, 248, 207),
+          rgb(188, 221, 135)
+        );
+      }
+
+      tr[class="to-buy"] {
+        background-image: linear-gradient(to right, #ffecd2, #fcb69f);
+      }
+
+      tr[class="in-cart"] {
+        background-image: linear-gradient(to right, #f6d365, #fda085);
+      }
+
+      span {
+        display: inline-block;
+      }
+
+      tr[class="to-buy"] span[class="status"] {
+        border: 2px solid rgb(15, 104, 15);
+        background-image: none;
+        border-radius: 5px;
+      }
+
+      tr[class="purchased"] span[class="status"] {
+        border: 2px solid rgb(15, 104, 15);
+        background-image: none;
+        border-radius: 5px;
+      }
+
+      tr[class="in-cart"] span[class="status"] {
+        border: 2px solid rgb(15, 104, 15);
+        background-image: none;
+        border-radius: 5px;
+      }
+
+      span[class="status"],
+      span[class^="rate"] {
+        height: 80%;
+        width: 80%;
+        padding: 5px;
+      }
+
+      span[class^="rate"] > span {
+        border: 1px solid rgb(15, 104, 15);
+        border-radius: 10px;
+        margin: 2px;
+        height: 80%;
+        width: 80%;
+        background-color: whitesmoke;
+      }
+
+      span[class~="one"] span:first-child {
+        background-image: linear-gradient(
+          to right,
+          rgb(211, 248, 207),
+          rgb(188, 221, 135)
+        );
+      }
+
+      span[class~="two"] span:nth-child(-n + 2) {
+        background-image: linear-gradient(
+          to right,
+          rgb(211, 248, 207),
+          rgb(188, 221, 135)
+        );
+      }
+
+      span[class~="three"] span {
+        background-image: linear-gradient(
+          to right,
+          rgb(211, 248, 207),
+          rgb(188, 221, 135)
+        );
+      }
+    </style>
+  </head>
+  <body>
     <div data-include="components/header.html"></div>
 
     <main>
-        <h2>Inventory</h2>
+      <h2>🐾 Jolly Dog Supply Inventory</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Brand</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="purchased">
+            <td>🥴 Premium Squeaky Bone</td>
+            <td>Jolly Dog Co.</td>
+            <td>Toys</td>
+            <td>
+              <span class="status"> Purchased </span>
+            </td>
+            <td>
+              <span class="rate three">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </td>
+          </tr>
+          <tr class="to-buy">
+            <td>🎾 Tennis Ball 6-Pack</td>
+            <td>Fetch Master</td>
+            <td>Toys</td>
+            <td>
+              <span class="status"> To Buy </span>
+            </td>
+            <td>
+              <span class="rate">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </td>
+          </tr>
+          <tr class="in-cart">
+            <td>🍖 Organic Chicken Treats</td>
+            <td>Healthy Paws</td>
+            <td>Treats</td>
+            <td>
+              <span class="status"> In Cart </span>
+            </td>
+            <td>
+              <span class="rate">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </td>
+          </tr>
+          <tr class="purchased">
+            <td>🥘 Stainless Steel Food Bowl</td>
+            <td>Dine & Dash</td>
+            <td>Feeding</td>
+            <td>
+              <span class="status"> Purchased </span>
+            </td>
+            <td>
+              <span class="rate two">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </td>
+          </tr>
+          <tr class="to-buy">
+            <td>🦿 Cozy Plush Bed</td>
+            <td>Snooze Heaven</td>
+            <td>Bedding</td>
+            <td>
+              <span class="status"> To Buy </span>
+            </td>
+            <td>
+              <span class="rate">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="projects/HTMLInclude-master/HTMLInclude.min.js"></script>
-</body>
+  </body>
 </html>

@@ -1,20 +1,193 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jed T. Duncan's Jolly Dog | ITIS3135 | Survey</title>
-    <link rel="stylesheet" href="styles/default.css">
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="styles/default.css" />
+    <script
+      src="https://lint.page/kit/4d0fe3.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      form {
+        background-color: rgb(188, 221, 135);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 600px;
+        margin: 20px auto;
+      }
 
+      label {
+        font-weight: bold;
+        color: rgb(15, 104, 15);
+        display: block;
+        margin-top: 15px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 2px solid rgb(162, 228, 57);
+        border-radius: 5px;
+        font-family: "Trebuchet MS", "Verdana", sans-serif;
+        box-sizing: border-box;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="number"]:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: rgb(15, 104, 15);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 8px;
+        cursor: pointer;
+      }
+
+      button[type="submit"] {
+        background-color: rgb(162, 228, 57);
+        color: rgb(15, 104, 15);
+        padding: 12px 30px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1em;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+        font-family: "Trebuchet MS", "Verdana", sans-serif;
+      }
+
+      button[type="submit"]:hover {
+        background-color: rgb(15, 104, 15);
+        color: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+      }
+
+      #description {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        color: rgb(15, 104, 15);
+      }
+    </style>
+  </head>
+  <body>
     <div data-include="components/header.html"></div>
-      
+
     <main>
-        <h2>Survey</h2>
+      <h2>🐕 Jolly Dog Owner Survey</h2>
+      <p id="description">
+        Help us learn more about you and your furry friend! Please fill out the
+        survey below.
+      </p>
+
+      <form id="survey-form">
+        <label id="name-label" for="name">Your Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+
+        <label id="email-label" for="email">Email Address:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label id="number-label" for="number">Your Dog's Age (in years):</label>
+        <input
+          type="number"
+          id="number"
+          name="number"
+          placeholder="Enter your dog's age"
+          min="0"
+          max="30"
+        />
+
+        <label for="dropdown">What size is your dog?</label>
+        <select id="dropdown" name="options">
+          <option value="small">🐶 Small (under 20 lbs)</option>
+          <option value="medium">🐕 Medium (20-50 lbs)</option>
+          <option value="large">🐾 Large (50-100 lbs)</option>
+          <option value="giant">🐻 Giant (over 100 lbs)</option>
+        </select>
+
+        <label>What's your dog's energy level?</label>
+        <input
+          type="radio"
+          id="radio1"
+          name="radio-group"
+          value="high-energy"
+        />
+        <label for="radio1" style="display: inline"
+          >🎾 High Energy (loves to run and play all day)</label
+        ><br />
+        <input type="radio" id="radio2" name="radio-group" value="moderate" />
+        <label for="radio2" style="display: inline"
+          >🛌 Moderate (enjoys walks but also likes to relax)</label
+        ><br />
+        <input type="radio" id="radio3" name="radio-group" value="low-energy" />
+        <label for="radio3" style="display: inline"
+          >💤 Low Energy (prefers lounging around)</label
+        >
+
+        <label
+          >What activities does your dog enjoy? (Select all that apply)</label
+        >
+        <input type="checkbox" id="checkbox1" name="interest" value="fetch" />
+        <label for="checkbox1" style="display: inline">🎾 Playing Fetch</label
+        ><br />
+        <input
+          type="checkbox"
+          id="checkbox2"
+          name="interest"
+          value="swimming"
+        />
+        <label for="checkbox2" style="display: inline">🏊 Swimming</label><br />
+        <input type="checkbox" id="checkbox3" name="interest" value="hiking" />
+        <label for="checkbox3" style="display: inline">🧗 Hiking</label><br />
+        <input
+          type="checkbox"
+          id="checkbox4"
+          name="interest"
+          value="training"
+        />
+        <label for="checkbox4" style="display: inline"
+          >🏆 Training & Tricks</label
+        >
+
+        <label for="comments">Tell us about your dog's personality:</label>
+        <textarea
+          id="comments"
+          name="comments"
+          rows="4"
+          cols="50"
+          placeholder="My dog is..."
+        ></textarea>
+
+        <button type="submit" id="submit">Submit Survey</button>
+      </form>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="projects/HTMLInclude-master/HTMLInclude.min.js"></script>
-</body>
+  </body>
 </html>
