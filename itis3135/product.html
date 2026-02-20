@@ -7,31 +7,125 @@
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
-        
+        #product-nav {
+            text-align: center;
+            margin: 10px 0 16px;
+        }
+
+        #product-nav a {
+            color: rgb(15, 104, 15);
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 2px;
+        }
+
+        #product-nav a:hover,
+        #product-nav a:focus {
+            background-color: rgb(162, 228, 57);
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin: 12px 0;
+        }
+
+        #video {
+            display: block;
+            max-width: 100%;
+            margin: 12px auto;
+        }
+
+        #form {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #email {
+            padding: 6px 10px;
+        }
+
+        #submit {
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
     </style>
 </head>
 <body>
     <div data-include="components/header.html"></div>
     <main>
         <h2>Product Landing Page</h2>
+        <nav id="product-nav">
+            <a href="#form">Submit</a>
+            <a href="#video">Video</a>
+            <a href="#content">Content</a>
+        </nav>
+        <p>Explore the Jolly Dog product line and sign up for updates on new drops and seasonal bundles.</p>
+
+        <section>
+            <h3>Join the List</h3>
+            <p>
+                Be first in line for limited runs and seasonal treats. We send one email per month
+                with new releases, restocks, and subscriber-only discounts.
+            </p>
+            <form id="form">
+                <label for="email">Email:</label>
+                <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="THIS DOES NOTHING"
+                >
+                <input id="submit" type="submit" value="Submit">
+            </form>
+            <p>
+                Prefer browsing first? Check the Jolly Dog inventory page for a quick snapshot of
+                our current lineup and ratings.
+            </p>
+        </section>
+
+        <section id="content">
+            <h3>Highlights</h3>
+            <ul>
+                <li>Durable, dog-friendly materials.</li>
+                <li>Simple care instructions and long-lasting use.</li>
+                <li>New drops announced to the email list first.</li>
+            </ul>
+            <p>
+                Built for muddy paws and happy tails, every Jolly Dog item is tested for everyday play.
+                Our toys focus on safe chew resistance, our bowls are dishwasher-safe, and our beds
+                use washable covers that stay soft after every wash.
+            </p>
+            <p>
+                Looking for a starter kit? Try the Jolly Dog Essentials bundle with a squeaky bone,
+                a feeding bowl, and a durable brush for keeping that coat shiny.
+            </p>
+        </section>
+
+        <section>
+            <h3>Product Video</h3>
+            <p>
+                Look at how happy these dogs are because of their Jolly Dog toys!
+            </p>
+            <iframe
+                id="video"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/AbszNcn0NFo"
+                title="Jolly Dog product overview"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+        </section>
     </main>
+
     <div data-include="components/footer.html"></div>
     <script src="projects/HTMLInclude-master/HTMLInclude.min.js"></script>
 </body>
 </html>
-<!-- 
-Your product landing page should have a header element with a corresponding id="header".
-You should have an image within the header element with a corresponding id="header-img" (A logo would make a good image here).
-Within the #header element, you should have a nav element with a corresponding id="nav-bar".
-You should have at least three clickable elements inside the nav element, each with the class nav-link.
-When you click a .nav-link button in the nav element, you should be taken to the corresponding section of the landing page.
-You should have an embedded product video with id="video".
-Your landing page should have a form element with a corresponding id="form".
-Within the form, there should be an input field with id="email" where you can enter an email address.
-The #email input field should have placeholder text to let users know what the field is for.
-The #email input field should use HTML5 validation to confirm that the entered text is an email address.
-Within the form, there should be a submit input with a corresponding id="submit".
-When you click the #submit element, the email should be submitted to a static page (use this mock URL: https://www.freecodecamp.org/email-submit).
-The navbar should always be at the top of the viewport.
-Your product landing page should have at least one media query.
-Your product landing page should utilize CSS flexbox at least once. -->
