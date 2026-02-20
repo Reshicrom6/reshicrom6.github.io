@@ -1,15 +1,16 @@
+
+
 body {
   display: flex;
   flex-direction: column;
   background-color: rgb(211, 248, 207);
-  justify-content: center;
   align-items: center;
   margin-top: 0px;
   font-family: "Trebuchet MS", "Verdana", sans-serif;
 }
 
 header {
-  width: 50%;
+  width: 60%;
   background-color: rgb(188, 221, 135);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -18,7 +19,6 @@ header {
 }
 
 header nav {
-  font-size: large;
   padding: 5px;
 }
 
@@ -40,13 +40,12 @@ main {
   text-align: left;
 }
 
-footer a:hover,
-footer a:visited {
-  color: purple;
+footer {
+  width: 60%;
 }
 
-footer {
-  width: 50%;
+footer a:hover {
+  color:purple;
 }
 
 footer nav {
