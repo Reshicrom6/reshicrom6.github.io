@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://lint.page/kit/4d0fe3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles/default.css" />
+    <title>Jed T. Duncan's Jolly Dog | ITIS3135 | Introduction Form</title>
+    <style>
+      .intro-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .intro-form fieldset {
+        border: 1px solid #777;
+        border-radius: 8px;
+        padding: 12px;
+      }
+
+      .intro-form legend {
+        font-weight: bold;
+      }
+
+      .intro-form label {
+        display: block;
+        margin-top: 8px;
+      }
+
+      .intro-form input,
+      .intro-form textarea {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 4px;
+        padding: 6px;
+      }
+
+      .intro-form textarea {
+        min-height: 70px;
+        resize: vertical;
+      }
+
+      .course-item {
+        border: 1px solid #999;
+        border-radius: 6px;
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+      .course-actions,
+      .form-actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
+      .result-image {
+        max-width: 100%;
+        width: 200px;
+        height: auto;
+      }
+
+      #generated-output pre {
+        padding: 12px;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+      <h2 id="page-heading">Introduction Form</h2>
+      <h3>Please submit the form below.</h3>
+
+      <section id="form-area">
+        <form id="intro-form" class="intro-form" novalidate>
+          <fieldset>
+            <legend>Name and Mascot</legend>
+            <label for="first-name">First Name *</label>
+            <input
+              id="first-name"
+              name="firstName"
+              type="text"
+              value="Jed"
+              placeholder="First name"
+              required
+            />
+
+            <label for="middle-name">Middle Name/Initial</label>
+            <input
+              id="middle-name"
+              name="middleName"
+              type="text"
+              value="T."
+              placeholder="Middle name or initial"
+            />
+
+            <label for="preferred-name">Nickname/Preferred Name</label>
+            <input
+              id="preferred-name"
+              name="preferredName"
+              type="text"
+              value=""
+              placeholder="Preferred name"
+            />
+
+            <label for="last-name">Last Name *</label>
+            <input
+              id="last-name"
+              name="lastName"
+              type="text"
+              value="Duncan"
+              placeholder="Last name"
+              required
+            />
+
+            <label for="divider">Divider *</label>
+            <input
+              id="divider"
+              name="divider"
+              type="text"
+              value="-"
+              placeholder="~, |, *, etc"
+              required
+            />
+
+            <label for="mascot-adjective">Mascot Adjective *</label>
+            <input
+              id="mascot-adjective"
+              name="mascotAdjective"
+              type="text"
+              value="Jolly"
+              placeholder="Mascot adjective"
+              required
+            />
+
+            <label for="mascot-animal">Mascot Animal *</label>
+            <input
+              id="mascot-animal"
+              name="mascotAnimal"
+              type="text"
+              value="Dog"
+              placeholder="Mascot animal"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>Acknowledgment</legend>
+            <label for="ack-statement">Acknowledgment Statement *</label>
+            <textarea
+              id="ack-statement"
+              name="ackStatement"
+              placeholder="Type your acknowledgment statement"
+              required
+            >
+I understand that what I put here is publically available on the web and I won't put anything here I don't want the public to see</textarea
+            >
+
+            <label for="ack-date">Acknowledgment Date *</label>
+            <input
+              id="ack-date"
+              name="ackDate"
+              type="date"
+              value="2026-01-12"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>Image and Intro</legend>
+            <label for="picture">Picture (upload optional)</label>
+            <input id="picture" name="picture" type="file" accept="image/*" />
+
+            <label for="default-image">Default Picture Path *</label>
+            <input
+              id="default-image"
+              name="defaultImage"
+              type="text"
+              value="images/jedpicture.jpg"
+              placeholder="images/your-image.jpg"
+              required
+            />
+
+            <label for="picture-alt">Picture Alt Text *</label>
+            <input
+              id="picture-alt"
+              name="pictureAlt"
+              type="text"
+              value="me"
+              placeholder="Describe the picture"
+              required
+            />
+
+            <label for="picture-caption">Picture Caption *</label>
+            <input
+              id="picture-caption"
+              name="pictureCaption"
+              type="text"
+              value="A picture of me"
+              placeholder="Picture caption"
+              required
+            />
+
+            <label for="personal-statement">Personal Statement *</label>
+            <textarea
+              id="personal-statement"
+              name="personalStatement"
+              placeholder="One paragraph personal statement"
+              required
+            >
+I am a junior at UNC Charlotte studying computer science. I am looking forward to learning more about frontend development this semester.</textarea
+            >
+          </fieldset>
+
+          <fieldset>
+            <legend>Background Bullets</legend>
+            <label for="personal-background">Personal Background *</label>
+            <textarea
+              id="personal-background"
+              name="personalBackground"
+              placeholder="Personal background"
+              required
+            >
+I am 23 years old, and love computers, games, and reading.</textarea
+            >
+
+            <label for="professional-background"
+              >Professional Background *</label
+            >
+            <textarea
+              id="professional-background"
+              name="professionalBackground"
+              placeholder="Professional background"
+              required
+            >
+All retail work.</textarea
+            >
+
+            <label for="academic-background">Academic Background *</label>
+            <textarea
+              id="academic-background"
+              name="academicBackground"
+              placeholder="Academic background"
+              required
+            >
+Currently a junior at UNCC, transferred from CPCC after completing my associate degree.</textarea
+            >
+
+            <label for="subject-background">Background in Subject *</label>
+            <textarea
+              id="subject-background"
+              name="subjectBackground"
+              placeholder="Background in subject"
+              required
+            >
+None really. I've done a small amount of experimentation with JavaScript, html, and CSS for a personal project, but I'm not proficient.</textarea
+            >
+
+            <label for="primary-computer">Primary Work Computer *</label>
+            <textarea
+              id="primary-computer"
+              name="primaryComputer"
+              placeholder="Primary work computer"
+              required
+            >
+Primarily use my custom windows desktop.</textarea
+            >
+
+            <label for="backup-computer"
+              >Backup Work Computer and Location *</label
+            >
+            <textarea
+              id="backup-computer"
+              name="backupComputer"
+              placeholder="Backup work computer and location"
+              required
+            >
+I also use a Dell XPS 15 that I can use either at Atkins or at my parents home in Waxhaw.</textarea
+            >
+
+            <label for="courses-summary">Course Summary *</label>
+            <textarea
+              id="courses-summary"
+              name="coursesSummary"
+              placeholder="A short intro for your courses"
+              required
+            >
+Current Courses:</textarea
+            >
+
+            <label for="funny-thing">Funny Thing</label>
+            <textarea
+              id="funny-thing"
+              name="funnyThing"
+              placeholder="Funny or interesting item"
+            >
+I was born with bilateral clubbed feet</textarea
+            >
+
+            <label for="share-more">Something I would like to share</label>
+            <textarea
+              id="share-more"
+              name="shareMore"
+              placeholder="Something extra to share"
+            >
+I was born in California.</textarea
+            >
+          </fieldset>
+
+          <fieldset>
+            <legend>Courses</legend>
+            <div id="courses-container"></div>
+            <div class="course-actions">
+              <button id="add-course" type="button">Add Course</button>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Quote</legend>
+            <label for="quote">Quote *</label>
+            <textarea
+              id="quote"
+              name="quote"
+              placeholder="Type a quote"
+              required
+            >
+Jed, you have 4000 hours in Rocket League. You should be good at this game by now.
+            </textarea>
+
+            <label for="quote-author">Quote Author *</label>
+            <input
+              id="quote-author"
+              name="quoteAuthor"
+              type="text"
+              value="My friend, Justin after we lost."
+              placeholder="Who said the quote"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>Links (5)</legend>
+            <label for="link-name-1">Link 1 Name *</label>
+            <input
+              id="link-name-1"
+              name="linkName1"
+              type="text"
+              value="CLT Web"
+              placeholder="Link label"
+              required
+            />
+            <label for="link-url-1">Link 1 URL *</label>
+            <input
+              id="link-url-1"
+              name="linkUrl1"
+              type="url"
+              value="https://webpages.charlotte.edu/jdunca56/"
+              placeholder="https://example.com"
+              required
+            />
+
+            <label for="link-name-2">Link 2 Name *</label>
+            <input
+              id="link-name-2"
+              name="linkName2"
+              type="text"
+              value="Github Pages"
+              placeholder="Link label"
+              required
+            />
+            <label for="link-url-2">Link 2 URL *</label>
+            <input
+              id="link-url-2"
+              name="linkUrl2"
+              type="url"
+              value="https://reshicrom6.github.io/"
+              placeholder="https://example.com"
+              required
+            />
+
+            <label for="link-name-3">Link 3 Name *</label>
+            <input
+              id="link-name-3"
+              name="linkName3"
+              type="text"
+              value="Github"
+              placeholder="Link label"
+              required
+            />
+            <label for="link-url-3">Link 3 URL *</label>
+            <input
+              id="link-url-3"
+              name="linkUrl3"
+              type="url"
+              value="https://github.com/Reshicrom6"
+              placeholder="https://example.com"
+              required
+            />
+
+            <label for="link-name-4">Link 4 Name *</label>
+            <input
+              id="link-name-4"
+              name="linkName4"
+              type="text"
+              value="freeCodeCamp"
+              placeholder="Link label"
+              required
+            />
+            <label for="link-url-4">Link 4 URL *</label>
+            <input
+              id="link-url-4"
+              name="linkUrl4"
+              type="url"
+              value="https://freecodecamp.org/jdunca56"
+              placeholder="https://example.com"
+              required
+            />
+
+            <label for="link-name-5">Link 5 Name *</label>
+            <input
+              id="link-name-5"
+              name="linkName5"
+              type="text"
+              value="LinkedIn"
+              placeholder="Link label"
+              required
+            />
+            <label for="link-url-5">Link 5 URL *</label>
+            <input
+              id="link-url-5"
+              name="linkUrl5"
+              type="url"
+              value="https://www.linkedin.com/in/jed-duncan-4755442b4/"
+              placeholder="https://example.com"
+              required
+            />
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit">Submit</button>
+            <button id="reset-defaults" type="reset">Reset</button>
+            <button id="clear-form" type="button">Clear</button>
+            <button id="generate-json" type="button">Generate JSON</button>
+            <button id="generate-html" type="button">Generate HTML</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="generated-output"></section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="projects/HTMLInclude-master/HTMLInclude.min.js"></script>
+    <script src="scripts/introduction.js"></script>
+    <script src="scripts/generate_json.js"></script>
+    <script src="scripts/generate_html.js"></script>
+  </body>
+</html>
